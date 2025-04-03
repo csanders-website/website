@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthwave Summit - Tickets</title>
+    <style>
+        body {
+            background-color: rgb(81, 105, 115);
+            margin: 0;
+            font-family: Verdana, sans-serif;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: #444;
+            width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        h1, h2, p {
+            color: white;
+        }
+
+        .ticket-table {
+            margin: 20px auto;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        select, button {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .ticket-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .ticket-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Synthwave Summit</h1>
+        <div class="menu-icon" onclick="toggleMenu()">☰ㅤ</div>
+        <div class="menu" id="dropdownMenu">
+            <a href="file:///C:/Users/cohen/Untitled-1.html">Home</a>
+            <a href="file:///C:/Users/cohen/about.html">About</a>
+            <a href="#lineup">Lineup</a>
+        </div>
+    </div>
+
+    <header>
+        <h1>Festival Tickets</h1>
+        <p>Tickets will be on sale from the first of April</p>
+    </header>
+
+    <section class="ticket-table">
+        <h2>Tickets</h2>
+        <label for="ticket-type">Ticket Type:</label>
+        <select id="ticket-type">
+            <option value="child">Child - $16</option>
+            <option value="adult">Adult - $23</option>
+        </select>
+        <br>
+        <label for="quantity">Quantity:</label>
+        <select id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <br>
+        <a href="#" class="ticket-btn">Buy Tickets</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Synthwave Summit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdownMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthwave Summit - Home</title>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdownMenu");
+            menu.classList.toggle("active");
+        }
+    
+        // Close menu when clicking outside
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("dropdownMenu");
+            var menuIcon = document.querySelector(".menu-icon");
+    
+            // Check if the click was outside the menu and menu icon
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+    <style>
+        body {
+            background-color: rgb(81, 105, 115);
+            margin: 0;
+            font-family: Verdana, sans-serif;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+
+        .menu-icon {
+    margin-right: 10px;
+}
+
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: #444;
+            width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        h1, h2, p {
+            color: white;
+            font-size: 24px;
+        }
+
+        ul {
+            color: white;
+            list-style: none;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .ticket-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .ticket-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <h1>Synthwave Summit</h1>
+        <div class="menu-icon" onclick="toggleMenu()">☰ㅤ</div>
+        <div class="menu" id="dropdownMenu">
+            <a href="file:///C:/Users/cohen/about.html">About</a>
+            <a href="#lineup">Lineup</a>
+            <a href="file:///C:/Users/cohen/tickets.html">Tickets</a>
+        </div>
+    </div>
+
+    <header>
+        <h1>Synthwave Summit</h1>
+        <p>The Ultimate Retro-Futuristic Music Experience</p>
+    </header>
+    
+    <section id="about">
+        <h2>About the Festival</h2>
+        <a href="file:///C:/Users/cohen/about.html" class="ticket-btn">Find out more</a>
+    </section>
+    
+    <section id="lineup">
+        <h2>Lineup</h2>
+        <ul>
+            <li>Aphex Twin</li>
+            <li>Boards of Canada</li>
+            <li>Autechre</li>
+            <li>Oneohtrix Point Never</li>
+        </ul>
+        <a href="lineup" class="ticket-btn">See our full lineup</a>
+    </section>
+    
+    <section id="tickets">
+        <h2>Get Your Tickets</h2>
+        <a href="file:///C:/Users/cohen/tickets.html" class="ticket-btn">Buy Tickets</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Synthwave Summit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdownMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
+
