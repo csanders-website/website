@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synthwave Summit - Lineup</title>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdownMenu");
+            menu.classList.toggle("active");
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function(event) {
+            var menu = document.getElementById("dropdownMenu");
+            var menuIcon = document.querySelector(".menu-icon");
+
+            // Check if the click was outside the menu and menu icon
+            if (!menu.contains(event.target) && !menuIcon.contains(event.target)) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+    <style>
+        body {
+            background-color: rgb(81, 105, 115);
+            margin: 0;
+            font-family: Verdana, sans-serif;
+            padding-top: 60px;
+            text-align: center;
+        }
+
+        .menu-icon {
+            margin-right: 10px;
+        }
+
+        .navbar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar h1 {
+            color: white;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .menu-icon {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: #444;
+            width: 150px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            background-color: #555;
+        }
+
+        .menu.active {
+            display: block;
+        }
+
+        h1, h2, p {
+            color: white;
+            font-size: 24px;
+        }
+
+        ul {
+            color: white;
+            list-style: none;
+            padding: 0;
+            font-size: 24px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .ticket-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #555;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .ticket-btn:hover {
+            background-color: #333;
+        }
+
+        #lineup {
+            margin-top: 80px;
+            padding: 40px;
+            background-color: #444;
+            border-radius: 10px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        #lineup h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        #lineup ul {
+            font-size: 20px;
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #lineup li {
+            margin-bottom: 10px;
+        }
+
+        .artist-info {
+            font-size: 18px;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <h1>Synthwave Summit</h1>
+        <div class="menu-icon" onclick="toggleMenu()">☰ㅤ</div>
+        <div class="menu" id="dropdownMenu">
+            <a href="https://csanders-website.github.io/website/Untitled-1.html">Home</a>
+            <a href="https://csanders-website.github.io/website/about.html">About</a>a>
+            <a href="https://csanders-website.github.io/website/tickets.html">Tickets</a>
+        </div>
+    </div>
+
+    <!-- Lineup Section -->
+    <header>
+        <h1>Lineup</h1>
+        <p>Check out the amazing artists and performers who will be rocking the stage at Synthwave Summit!</p>
+    </header>
+
+    <section id="lineup">
+        <h2>Our Featured Artists</h2>
+
+        <!-- Lineup List -->
+        <ul>
+            <li>
+                <strong>Aphex Twin</strong>
+                <div class="artist-info">Legendary British electronic music producer known for his unique and experimental style.</div>
+            </li>
+            <li>
+                <strong>Boards of Canada</strong>
+                <div class="artist-info">A Scottish duo with a signature sound blending ambient, IDM, and downtempo electronic music.</div>
+            </li>
+            <li>
+                <strong>Autechre</strong>
+                <div class="artist-info">Innovators in abstract electronic music, known for their intricate compositions and evolving sound.</div>
+            </li>
+            <li>
+                <strong>Oneohtrix Point Never</strong>
+                <div class="artist-info">Experimental musician blending ambient, synthwave, and noise elements to create deeply immersive music.</div>
+            </li>
+            <li>
+                <strong>Carpenter Brut</strong>
+                <div class="artist-info">French synthwave artist with dark and aggressive beats, perfect for lovers of cinematic synth music.</div>
+            </li>
+            <li>
+                <strong>Gunship</strong>
+                <div class="artist-info">A synthwave band known for their atmospheric soundtracks and nostalgic 80s-inspired beats.</div>
+            </li>
+        </ul>
+
+        <a href="https://csanders-website.github.io/website/tickets.html" class="ticket-btn">Get Tickets</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Synthwave Summit. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdownMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
